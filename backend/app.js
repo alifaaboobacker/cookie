@@ -7,7 +7,7 @@ const cors = require('cors');
 app.use(express.json());
 app.use(
     cors({
-        origin: ['http://localhost:3000', 'http://192.168.3.15:3000'],
+        origin: ['http://localhost:3000', 'http://192.168.3.15:3000','https://cookie-1-92bp.onrender.com'],
         credentials: true,
         methods: ["GET", "POST", "PUT", "DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
