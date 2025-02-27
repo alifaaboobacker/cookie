@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run clean && npm install --production",
-    "start": "node src/main.js",
-    "dev": "nodemon src/main.js"
+    "start": "node main.js",
+    "dev": "nodemon main.js"
   },
   "author": "",
   "license": "ISC",
