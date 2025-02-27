@@ -20,7 +20,7 @@ const Signin = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("http://localhost:7000/user/add", formData);
+      const response = await axios.post("https://cookie-j3zs.onrender.com/user/add", formData);
       if (response.data.user._id) {
         sessionStorage.setItem("userId", response.data.user._id);
         navigate("/home");

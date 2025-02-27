@@ -20,13 +20,13 @@ const Home = () => {
     const [localUpdates, setLocalUpdates] = useState(0);
 
     useEffect(() => {
-        axios.get("http://localhost:7000/score/gift")
+        axios.get("https://cookie-j3zs.onrender.com/score/gift")
             .then(response => setPrizes(response.data.prizes || []))
             .catch(() => setPrizes([]));
     
         const userId = sessionStorage.getItem("userId");
         if (userId) {
-            axios.get(`http://localhost:7000/user/${userId}`)
+            axios.get(`https://cookie-j3zs.onrender.com/user/${userId}`)
                 .then(response => {
                     const userData = response.data.user;
                     setUser(userData);
@@ -46,7 +46,7 @@ const Home = () => {
 
     useEffect(() => {
         if (localUpdates >= 10) {
-            axios.post("http://localhost:7000/score/add", {
+            axios.post("https://cookie-j3zs.onrender.com/score/add", {
                 userId: sessionStorage.getItem("userId"),
                 totalScore: counter,
                 bonusesReceived: bonuses,
